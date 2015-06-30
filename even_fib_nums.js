@@ -7,9 +7,20 @@
  */
 module.exports = function( maxFibValue ) {
   var sum = 0;
-
-  // do your work here
-
+  var current = 1;
+  var last = 0;
+  fibonacci(1);
+  function fibonacci(number){
+    var temp = current;
+    current += last;
+    last = temp;
+    if(current <= maxFibValue){
+      if(current%2 === 0){
+        sum += current;
+      }
+      fibonacci(current)
+    }
+  }
   return sum;
 };
 
