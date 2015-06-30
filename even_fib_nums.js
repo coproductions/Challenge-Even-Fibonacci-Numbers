@@ -42,7 +42,20 @@ var highestFibonacciNumber = function(maxFibValue){
   return highest;
 };
 
+var anotherFibonacciFunc = function(maxFibValue){
+  var current = 1;
+  var last = 0;
+  var highest = 0;
+  while(current <= maxFibValue){
+    highest = current;
+    current += last;
+    last = current - last;
+  }
+  return highest;
+}
+
 module.exports = {
   sumFibs : sumFibs,
-  highestFibonacciNumber : highestFibonacciNumber
+  highestFibonacciNumber : highestFibonacciNumber,
+  anotherFibonacciFunc : anotherFibonacciFunc
 }

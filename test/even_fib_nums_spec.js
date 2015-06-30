@@ -38,6 +38,11 @@ describe( 'Highest number in Fibonacci sequence', function() {
     var highest = fibonnaciNums.highestFibonacciNumber( 100 );
     highest.should.equal( 89 );
   });
+
+   it( 'should return the highest Fibonacci number less than the given input', function() {
+    var highest = fibonnaciNums.anotherFibonacciFunc( 100 );
+    highest.should.equal( 89 );
+  });
 });
 
 
